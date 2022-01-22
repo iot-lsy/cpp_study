@@ -1,0 +1,14 @@
+all: RectangleFaultFind
+
+RectangleFaultFind: Point.o Rectangle.o RectangleFaultFind.o
+	g++ -o RectangleFaultFind Point.o Rectangle.o RectangleFaultFind.o
+	
+Point.o: Point.h Point.cpp
+	g++ -c -o Point.o Point.cpp
+
+Rectangle.o: Rectangle.h Rectangle.cpp
+	g++ -c -o Rectangle.o Rectangle.cpp
+
+RectangleFaultFind.o: RectangleFaultFind.h RectangleFaultFind.cpp
+	g++ -c -o RectangleFaultFind.o RectangleFaultFind.cpp
+
